@@ -1,13 +1,13 @@
 {
   "name": "data-structures",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "This repo contains practices about data structures with JavaScript",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "yarn run jest"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Güven Karanfil",
+  "license": "MIT",
   "devDependencies": {
     "@babel/cli": "^7.14.8",
     "@babel/preset-env": "^7.15.0",
