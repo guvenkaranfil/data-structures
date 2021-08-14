@@ -27,7 +27,6 @@ describe("Single LinkedList", () => {
     list.append(3);
     list.append(4);
 
-    expect(list.head.value).toBe(1);
-    expect(list.tail.value).toBe(4);
+    expect(list.toString()).toBe("1,2,3,4");
   });
 });

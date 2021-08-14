@@ -21,4 +21,23 @@ export default class LinkedList {
 
     return this;
   }
+
+  toArray() {
+    const nodes = [];
+
+    let currentNode = this.head;
+    while (currentNode) {
+      nodes.push(currentNode);
+
+      currentNode = currentNode.next;
+    }
+
+    return nodes;
+  }
+
+  toString() {
+    return this.toArray()
+      .map((node) => node.value)
+      .toString();
+  }
 }
