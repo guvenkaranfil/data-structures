@@ -22,10 +22,7 @@ describe("Single LinkedList", () => {
 
   test("should append new element to the non-empty list", () => {
     const list = new LinkedList();
-    list.append(1);
-    list.append(2);
-    list.append(3);
-    list.append(4);
+    list.fromArray([1, 2, 3, 4]);
 
     expect(list.toString()).toBe("1,2,3,4");
   });

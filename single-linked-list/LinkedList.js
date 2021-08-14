@@ -22,6 +22,10 @@ export default class LinkedList {
     return this;
   }
 
+  fromArray(values) {
+    values.forEach((value) => this.append(value));
+  }
+
   toArray() {
     const nodes = [];
 
