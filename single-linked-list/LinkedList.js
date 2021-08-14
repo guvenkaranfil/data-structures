@@ -15,5 +15,10 @@ export default class LinkedList {
 
       return this;
     }
+
+    this.tail.next = newNode;
+    this.tail = newNode;
+
+    return this;
   }
 }
