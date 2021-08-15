@@ -75,4 +75,20 @@ describe("Single LinkedList", () => {
     expect(list.tail.value).toBe(3);
     expect(list.toString()).toBe("1,2,3");
   });
+
+  test("should delete value from the list including head and tail", () => {
+    const list = new LinkedList();
+    list.append(1);
+    list.append(1);
+    list.append(2);
+    list.append(3);
+    list.append(1);
+    list.append(5);
+
+    const deletedNode = list.delete(1);
+
+    expect(deletedNode.value).toBe(1);
+    expect(list.tail.value).toBe(5);
+    expect(list.toString()).toBe("2,3,5");
+  });
 });
