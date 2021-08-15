@@ -47,4 +47,17 @@ describe("Single LinkedList", () => {
 
     expect(deletedNode).toBeNull();
   });
+
+  test("should delete value from the list including head", () => {
+    const list = new LinkedList();
+    list.append(3);
+    list.append(2);
+    list.append(1);
+    list.append(3);
+
+    const deletedNode = list.delete(3);
+
+    expect(deletedNode.value).toBe(3);
+    expect(list.toString()).toBe("2,1");
+  });
 });
