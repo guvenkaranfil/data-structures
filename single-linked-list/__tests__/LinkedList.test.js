@@ -91,4 +91,16 @@ describe("Single LinkedList", () => {
     expect(list.tail.value).toBe(5);
     expect(list.toString()).toBe("2,3,5");
   });
+
+  test("should find node by given value", () => {
+    const list = new LinkedList();
+    list.fromArray([1, 2, 3, "1", 321, 12]);
+
+    const node = list.find(12);
+
+    expect(node).toBeDefined();
+    expect(node.value).toBe(12);
+
+    expect(list.find(10)).toBeNull;
+  });
 });

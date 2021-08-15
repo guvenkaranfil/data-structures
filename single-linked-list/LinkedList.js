@@ -65,6 +65,24 @@ export default class LinkedList {
     return deletedNode;
   }
 
+  find(value) {
+    if (!this.head) {
+      return null;
+    }
+
+    let currentNode = this.head;
+
+    while (currentNode) {
+      if (currentNode.value === value) {
+        return currentNode;
+      }
+
+      currentNode = currentNode.next;
+    }
+
+    return null;
+  }
+
   fromArray(values) {
     values.forEach((value) => this.append(value));
   }
