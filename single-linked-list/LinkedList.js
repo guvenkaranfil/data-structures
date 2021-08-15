@@ -58,6 +58,10 @@ export default class LinkedList {
       }
     }
 
+    if (this.tail.value === value) {
+      this.tail = currentNode;
+    }
+
     return deletedNode;
   }
 

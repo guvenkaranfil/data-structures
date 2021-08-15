@@ -60,4 +60,19 @@ describe("Single LinkedList", () => {
     expect(deletedNode.value).toBe(3);
     expect(list.toString()).toBe("2,1");
   });
+
+  test("should delete value from the list including tail", () => {
+    const list = new LinkedList();
+    list.append(1);
+    list.append(2);
+    list.append(3);
+    list.append(4);
+    list.append(4);
+
+    const deletedNode = list.delete(4);
+
+    expect(deletedNode.value).toBe(4);
+    expect(list.tail.value).toBe(3);
+    expect(list.toString()).toBe("1,2,3");
+  });
 });
