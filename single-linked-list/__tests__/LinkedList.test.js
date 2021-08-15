@@ -26,4 +26,25 @@ describe("Single LinkedList", () => {
 
     expect(list.toString()).toBe("1,2,3,4");
   });
+
+  test("should prepend new element to the list", () => {
+    const list = new LinkedList();
+    list.prepend(3);
+
+    expect(list.head.value).toBe(3);
+    expect(list.tail.value).toBe(3);
+
+    list.append(1);
+    list.prepend(2);
+
+    expect(list.toString()).toBe("2,3,1");
+  });
+
+  test("should not delete value from a empty linked list. Method should return null", () => {
+    const list = new LinkedList();
+
+    const deletedNode = list.delete(3);
+
+    expect(deletedNode).toBeNull();
+  });
 });

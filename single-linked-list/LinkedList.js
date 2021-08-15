@@ -6,6 +6,17 @@ export default class LinkedList {
     this.tail = null;
   }
 
+  prepend(value) {
+    const newNode = new Node(value, this.head);
+    this.head = newNode;
+
+    if (!this.tail) {
+      this.tail = newNode;
+    }
+
+    return this;
+  }
+
   append(value) {
     const newNode = new Node(value);
 
@@ -20,6 +31,12 @@ export default class LinkedList {
     this.tail = newNode;
 
     return this;
+  }
+
+  delete() {
+    if (!this.head) {
+      return null;
+    }
   }
 
   fromArray(values) {
